@@ -20,8 +20,6 @@ public class Hooks {
 		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 	}
 
-	
-
 	@After
 	public void tearDown(Scenario scenario) {
 		// only takes a screenshot if the scenario fails

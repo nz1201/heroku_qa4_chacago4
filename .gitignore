@@ -16,23 +16,14 @@ local.properties
 .loadpath
 .recommenders
 
-# External tool builders
-.externalToolBuilders/
+
 
 # Locally stored "Eclipse launch configurations"
 *.launch
 
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
 
-# CDT-specific (C/C++ Development Tooling)
-.cproject
 
-# CDT- autotools
-.autotools
 
-# Java annotation processor (APT)
-.factorypath
 
 # PDT-specific (PHP Development Tools)
 .buildpath
@@ -40,25 +31,13 @@ local.properties
 # sbteclipse plugin
 .target
 
-# Tern plugin
-.tern-project
 
-# TeXlipse plugin
-.texlipse
 
-# STS (Spring Tool Suite)
-.springBeans
 
-# Code Recommenders
-.recommenders/
 
-# Annotation Processing
-.apt_generated/
 
-# Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
+
+
 
 ### Eclipse Patch ###
 # Eclipse Core
@@ -67,8 +46,7 @@ local.properties
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
-# Annotation Processing
-.apt_generated
+
 
 ### macOS ###
 # General
@@ -76,28 +54,11 @@ local.properties
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
 
 
-# End of https://www.gitignore.io/api/macos,eclipse
+
+
+
+
+
 /target/
