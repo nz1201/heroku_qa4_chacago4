@@ -18,6 +18,6 @@ import cucumber.api.junit.Cucumber;
 		)
 
 
-public class CukesRunner {
+public class SmokeTest_Runner {
 
 }
