@@ -1,11 +1,10 @@
 Feature: Users Cancelations 
 
 
-@reg	
+@reg @hus	
 Scenario: End to End reservation 
-Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
+Given the user "abowfinc1@ning.com" and "emeryvassar"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -14,14 +13,13 @@ Then the user should go schedule page
 Then the user check if it was reserved or not
 And the student from same group check if it was reserved or not
 Then the student from different group check if it was reserved or not
-
+And  cancel reservation of end to end
 
 
 @reg	
 Scenario: Room reservation  
 Given the user "htwinbrowb4@blogspot.com" and "kanyabang"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -34,7 +32,6 @@ Then the user check if it was reserved or not
 Scenario Outline:: Teacher's reservation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -54,7 +51,6 @@ Examples:
 Scenario Outline:: TeamLead's reservation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -79,7 +75,6 @@ Examples:
 Scenario Outline:: Student's reservation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time

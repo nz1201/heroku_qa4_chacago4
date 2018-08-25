@@ -5,7 +5,6 @@ Feature: Users Reservations
 Scenario: Cancelation of reservation  
 Given the user "htwinbrowb4@blogspot.com" and "kanyabang"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -18,7 +17,6 @@ Then the user click cancel and message will displayed
 Scenario Outline:: Teacher's cancelation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -39,7 +37,6 @@ Examples:
 Scenario Outline:: TeamLead's cancelation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time
@@ -62,10 +59,9 @@ Examples:
 
 	
 @reg	
-Scenario Outline:: Student's cancelation 
+Scenario Outline: Student's cancelation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
-When the user should be on homePage
 Then the user should click hunt button
 And the user should select available date
 Then the user should select avaliable time

@@ -20,8 +20,6 @@ public class Hooks {
 		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 	}
 
-	
-
 	@After
 	public void tearDown(Scenario scenario) {
 		// only takes a screenshot if the scenario fails
@@ -32,6 +30,6 @@ public class Hooks {
 			// adding the screenshot to the report
 			scenario.embed(screenshot, "image/png");
 		}
-		Driver.closeDriver();
+//		Driver.closeDriver();
 	}
 }

@@ -5,7 +5,6 @@ Feature: Verifications
 Scenario Outline: Students' locations
 Given the user "dfrederickb5@yellowbook.com" and "engraciahuc"
 And the user should click signin button
-When the user should be on homePage
 Then the user should see just study rooms: "<eachRoom>" are clickable
 
 Examples:
@@ -23,7 +22,6 @@ Examples:
 Scenario Outline: Name verification
 	Given the user "<email>" and "<password>"
 	And the user should click signin button
-	When the user should be on homePage
 	Then the user should go to my-self account page
 	And the user's name: "<userName>" should be displayed
 	
@@ -42,7 +40,6 @@ Scenario Outline: Name verification
 Scenario Outline: Team's name verification
 	Given the user "<email>" and "<password>"
 	And the user should click signin button
-	When the user should be on homePage
 	Then the user should go to my-team account page
 	And the user's team name: "<teamName>" should be displayed
 	
@@ -61,7 +58,6 @@ Scenario Outline: Team's name verification
 Scenario: Modules verification
 	Given the user "dfrederickb5@yellowbook.com" and "engraciahuc"
 	And the user should click signin button
-	When the user should be on homePage
 	Then the user should see all modules:
 	|map	  |
 	|schedule |
@@ -72,7 +68,6 @@ Scenario: Modules verification
 Scenario: Reservation time verification
 	Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 	And the user should click signin button
-	When the user should be on homePage
 	Then the user should click hunt button
 	And the user should select available date
 	Then the user should select avaliable time
