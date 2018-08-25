@@ -1,6 +1,7 @@
 package com.heroku.steps_definitions;
 
-import org.openqa.selenium.interactions.Action;
+
+import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 
 import com.heroku.pages.HuntPage;
@@ -12,7 +13,7 @@ import com.heroku.utilities.Driver;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
-import junit.framework.Assert;
+
 
 public class Reservations_Steps {
 	
@@ -21,8 +22,6 @@ public class Reservations_Steps {
 	public void the_user_should_click_hunt_button() {
 	  HuntPage hunt = new HuntPage();
 	  hunt.goToHunt();
-
-
 		
 		
 	}
@@ -119,5 +118,23 @@ public class Reservations_Steps {
 		schedule.cancelSchedule.click();
 	   
 	}
+	@Then("cancelation of room reservation")
+	public void cancelation_of_room_reservation() {
+		SignInPage signInPage = new SignInPage();
+		signInPage.signOut();
+		signInPage.email.sendKeys("abowfinc1@ning.com");
+		signInPage.password.sendKeys("emeryvassar");
+		signInPage.signInButton.click();
+		SchedulePage schedule = new SchedulePage();
+		schedule.goToSchedule();
+		schedule.checkRoom.click();
+		BrowserUtils.waitFor(3);
+		schedule.cancelSchedule.click();
+	}
+
+	
+	
+	
+	
 
 }
