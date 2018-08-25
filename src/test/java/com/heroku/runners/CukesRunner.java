@@ -11,10 +11,10 @@ import cucumber.api.junit.Cucumber;
 				"json:target/cucumber-heroku.json",
 				"rerun:target/rerun.txt"
 		},
-		tags = "@hus",
+		tags = "@cancel",
 		features = {"src/test/resources/com/features"},
-		glue="com/heroku/steps_definitions",
-				dryRun =false
+		glue="com/heroku/steps_definitions"
+//				,dryRun =true
 		)
 
 
