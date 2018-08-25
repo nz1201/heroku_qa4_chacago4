@@ -38,8 +38,6 @@ Examples:
 |microsoft |
 
 
-
-
 @reg	
 Scenario: Calendar view of date
 Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
