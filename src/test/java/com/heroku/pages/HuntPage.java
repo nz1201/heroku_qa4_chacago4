@@ -32,6 +32,13 @@ public class HuntPage extends TopNavigationBar {
 
 	@FindBy(xpath = "//button")
 	public WebElement confirmRoom;
+	
+	@FindBy(xpath = "//div[@class='field']//input")
+	public WebElement clickDateBoxMin;
+	
+	@FindBy(xpath = "//div[@class='field']//input")
+	public WebElement clickDateBoxMax;
+	
 
 	public String dayOfNextWeek() {
 		LocalDate currentDate = LocalDate.now();
