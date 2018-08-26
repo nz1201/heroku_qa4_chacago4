@@ -31,7 +31,7 @@ public class Reservations_Steps {
 	public void the_user_should_select_available_date() {
 		  HuntPage hunt = new HuntPage();
 		  hunt.dateClick.click();
-		  hunt.dateClick.sendKeys("923");
+		  hunt.dateClick.sendKeys(new HuntPage().dayOfNextWeek());
 		  
 
 	
