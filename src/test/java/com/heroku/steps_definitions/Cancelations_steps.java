@@ -24,9 +24,10 @@ public class Cancelations_steps {
 		HuntPage hunt = new HuntPage();
 		hunt.goToHunt();
 
-		hunt.dateClick.click();
+		
 		Thread.sleep(3000);
-		hunt.dateClick.sendKeys(hunt.dayOfNextWeek());
+		String dm = hunt.monthOfNextWeek()+hunt.dayOfNextWeek();
+		hunt.dateClick.sendKeys("9");
 		Thread.sleep(3000);
 		Select select = new Select(hunt.timeStart);
 		select.selectByValue("0: Object");

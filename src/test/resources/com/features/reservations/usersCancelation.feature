@@ -1,7 +1,7 @@
 Feature: Users Reservations 
 
 
-@reg	 @cancel
+@reg	 @lolo
 Scenario: Cancelation of reservation  
 Given the user "htwinbrowb4@blogspot.com" and "kanyabang"
 And the user should click signin button
