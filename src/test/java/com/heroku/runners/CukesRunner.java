@@ -11,10 +11,12 @@ import cucumber.api.junit.Cucumber;
 				"json:target/cucumber-heroku.json",
 				"rerun:target/rerun.txt"
 		},
+
 		tags = "@c",
 		features = {"src/test/resources/com/features/back-end-features","src/test/resources/com/features/ui-features"},
 		glue= {"com/heroku/steps_definitions", "com/herokuBackend/steps_definitions"}
 //				,dryRun =true
+
 		)
 
 

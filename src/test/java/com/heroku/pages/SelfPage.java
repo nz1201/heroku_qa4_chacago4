@@ -12,9 +12,14 @@ public class SelfPage extends TopNavigationBar{
 		PageFactory.initElements(Driver.getDriver(), this);
 	
 	}
+
 	@FindBy(xpath = "(//*[@class='title is-6'])[2]")
 	public WebElement role;
 	
 	@FindBy(xpath = "(//*[@class='title is-6'])[1]")
 	public WebElement name;
+
+	@FindBy (xpath="(//div//p)[1]")
+	public WebElement username;
+
 }

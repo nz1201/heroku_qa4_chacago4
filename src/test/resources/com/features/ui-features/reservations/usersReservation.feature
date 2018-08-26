@@ -1,7 +1,6 @@
 Feature: Users Cancelations 
 
-
-@reg @husal	
+@reg @huso
 Scenario: End to End reservation 
 Given the user "abowfinc1@ning.com" and "emeryvassar"
 And the user should click signin button
@@ -47,7 +46,7 @@ Examples:
 
 
 
-@reg	
+@reg	@ado
 Scenario Outline:: TeamLead's reservation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
@@ -57,17 +56,18 @@ Then the user should select avaliable time
 And the user should select available room
 Then the user should go schedule page 
 Then the user check if it was reserved or not
+And cancel of Teamlead
 
 Examples: 
-	|<email> 						  |<password> 	|
-    |htwinbrowb4@blogspot.com		  |				|
-	|efieldenba@cbslocal.com		  |				|
-	|osurmeyersbf@illinois.edu		  |				|
- 	|sbirdbj@fc2.com				  |				|
-	|ggreeninbm@flavors.me			  |				|
-	|larnaezbp@symantec.com			  |				|
-	|hcranfieldbx@blinklist.com		  |				|
-	|abowfinc1@ning.com				  |				|
+	|email					  |password			|
+    |htwinbrowb4@blogspot.com		  |	kanyabang			|
+	|efieldenba@cbslocal.com		  |	claudinebarnsley	|
+	|osurmeyersbf@illinois.edu		  |	jacquenettakelling	|
+ 	|sbirdbj@fc2.com				  |	asenorval			|
+	|ggreeninbm@flavors.me			  |	arleenjoney			|
+	|larnaezbp@symantec.com			  |	kialstowgill		|
+	|hcranfieldbx@blinklist.com		  |	belviaizzatt		|
+	|abowfinc1@ning.com				  |	emeryvassar			|
    
 
 	

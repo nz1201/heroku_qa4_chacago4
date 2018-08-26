@@ -43,7 +43,7 @@ public class HuntPage extends TopNavigationBar {
 	
 	public String dayOfNextWeek() {
 		LocalDate currentDate = LocalDate.now();
-		currentDate = currentDate.plusDays(7);
+		currentDate = currentDate.plusDays(6);
 		int month = currentDate.getMonthValue();
 		int dow = currentDate.getDayOfMonth();
 		String rtrn= month+""+dow;
@@ -72,6 +72,8 @@ public class HuntPage extends TopNavigationBar {
 		int month = currentDate.getMonthValue();
 		return String.valueOf(month);
 	}
+
+
 	
 		public static void main(String[] args) {
 			System.out.println(new HuntPage().dayOfNextWeek());
