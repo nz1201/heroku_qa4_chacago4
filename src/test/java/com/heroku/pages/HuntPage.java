@@ -35,10 +35,12 @@ public class HuntPage extends TopNavigationBar {
 
 	public String dayOfNextWeek() {
 		LocalDate currentDate = LocalDate.now();
-		currentDate = currentDate.plusDays(7);
+		currentDate = currentDate.plusDays(2);
 		int dow = currentDate.getDayOfMonth();
 		String dow1 = String.valueOf(dow);
 		return dow1;	
 	}
+
+
 	
 }

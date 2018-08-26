@@ -1,5 +1,6 @@
 package com.heroku.steps_definitions;
 
+import cucumber.api.java.en.Given;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.Select;
 
@@ -119,5 +120,29 @@ public class Reservations_Steps {
 		schedule.cancelSchedule.click();
 	   
 	}
+
+	// TeamLead reservation
+	@Then("cancel of Teamlead")
+	public void cancel_of_Teamlead() {
+		SignInPage signInPage = new SignInPage();
+		signInPage.signOut();
+		signInPage.email.sendKeys("teacherilsamnickel@gmail.com");
+		signInPage.password.sendKeys("samnickel");
+		signInPage.signInButton.click();
+		SchedulePage schedule = new SchedulePage();
+		schedule.goToSchedule();
+		schedule.checkRoom.click();
+		BrowserUtils.waitFor(3);
+		schedule.cancelSchedule.click();
+		signInPage.signOut();
+	}
+
+
+
+
+
+
+
+
 
 }
