@@ -1,19 +1,12 @@
 Feature: Verifications 
 
 
-@reg	
-Scenario Outline: Students' locations
+@reg @akmal1	
+Scenario: Students' locations
 Given the user "dfrederickb5@yellowbook.com" and "engraciahuc"
 And the user should click signin button
-Then the user should see just study rooms: "<eachRoom>" are clickable
+Then the user should see just study rooms are clickable
 
-Examples:
-|eachRoom |
-|apple |
-|facebook|
-|amazon|
-|tesla|
-|microsoft |
 
 
 
@@ -54,7 +47,7 @@ Scenario Outline: Team's name verification
 
 
 
-@reg	
+@reg	@akmal22
 Scenario: Modules verification
 	Given the user "dfrederickb5@yellowbook.com" and "engraciahuc"
 	And the user should click signin button
