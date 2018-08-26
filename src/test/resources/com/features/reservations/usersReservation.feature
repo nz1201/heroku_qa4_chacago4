@@ -1,7 +1,7 @@
 Feature: Users Cancelations 
 
 
-@reg @hus	
+@reg @husal	
 Scenario: End to End reservation 
 Given the user "abowfinc1@ning.com" and "emeryvassar"
 And the user should click signin button
@@ -16,7 +16,7 @@ Then the student from different group check if it was reserved or not
 And  cancel reservation of end to end
 
 
-@reg	
+@reg @aigerim
 Scenario: Room reservation  
 Given the user "htwinbrowb4@blogspot.com" and "kanyabang"
 And the user should click signin button

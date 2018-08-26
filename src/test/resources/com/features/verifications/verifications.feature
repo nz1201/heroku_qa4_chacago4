@@ -44,10 +44,10 @@ Scenario Outline: Team's name verification
 	And the user's team name: "<teamName>" should be displayed
 	
 	Examples:
-    |<email> 						  |<password>| <teamName>|
-    |htwinbrowb4@blogspot.com		  | 		 ||
-	|dfrederickb5@yellowbook.com      |			||
-	|apainb6@google.co.jp		      |			||
+    |email 						 	 |password| teamName|
+    |htwinbrowb4@blogspot.com		  | 	  |         |
+	|dfrederickb5@yellowbook.com      |		  |			|
+	|apainb6@google.co.jp		      |		  | 	|
 	|fbawmeb7@studiopress.com	      |			||
 	|dhughillb8@gov.uk			      |			||
 	|nasgodbyb9@amazon.co.jp	      |			||
