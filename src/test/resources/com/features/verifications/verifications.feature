@@ -1,19 +1,12 @@
 Feature: Verifications 
 
 
-@reg	
-Scenario Outline: Students' locations
+@reg @b	
+Scenario: Students' locations
 Given the user "dfrederickb5@yellowbook.com" and "engraciahuc"
 And the user should click signin button
-Then the user should see just study rooms: "<eachRoom>" are clickable
+Then the user should see just study rooms are clickable
 
-Examples:
-|eachRoom |
-|apple |
-|facebook|
-|amazon|
-|tesla|
-|microsoft |
 
 
 
@@ -54,7 +47,7 @@ Scenario Outline: Team's name verification
 
 
 
-@reg	
+@reg	@b
 Scenario: Modules verification
 	Given the user "dfrederickb5@yellowbook.com" and "engraciahuc"
 	And the user should click signin button
@@ -64,13 +57,15 @@ Scenario: Modules verification
 	|hunt     |
 	|my       |
 	
-@reg	
-Scenario: Reservation time verification
+@reg	@c
+Scenario Outline: Reservation time verification
 	Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 	And the user should click signin button
 	Then the user should click hunt button
 	And the user should select available date
-	Then the user should select avaliable time
-	And the user should be able to choose min and max time
-	|min  |30|
-	|max  |2 |
+	And the user should be able to "<choose>" time : "<time>"
+	
+	Examples: 
+	|time| choose|
+	|30|	min|
+	|200| max|

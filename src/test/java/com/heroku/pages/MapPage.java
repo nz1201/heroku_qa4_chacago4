@@ -1,5 +1,8 @@
 package com.heroku.pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -38,6 +41,19 @@ public class MapPage extends TopNavigationBar {
 	
 	@FindBy(xpath = "//*[contains(text(),'7:00am')]")
 	public WebElement dailyView;
+
+	@FindBy(xpath="(//div[@class='navbar-end']/a)[1]")
+	public WebElement mapModule;
 	
+	@FindBy(xpath="(//div[@class='navbar-end']/a)[2]")
+	public WebElement scheduleModule;
+	
+	@FindBy(xpath="(//div[@class='navbar-end']/a)[3]")
+	public WebElement huntModule;
+	
+	@FindBy(xpath="//a[@class='navbar-link']")
+	public WebElement myModule;
+	
+
 	
 }

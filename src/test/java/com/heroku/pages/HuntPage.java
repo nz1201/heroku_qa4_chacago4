@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.heroku.utilities.Driver;
 
@@ -39,7 +40,7 @@ public class HuntPage extends TopNavigationBar {
 	@FindBy(xpath = "//div[@class='field']//input")
 	public WebElement clickDateBoxMax;
 	
-
+	
 	public String dayOfNextWeek() {
 		LocalDate currentDate = LocalDate.now();
 		currentDate = currentDate.plusDays(7);
@@ -48,5 +49,20 @@ public class HuntPage extends TopNavigationBar {
 		String rtrn= month+""+dow;
 		return rtrn;	
 	}
-	
+	public int firstTimeToInt() {
+	Select select2 = new Select(new HuntPage().timeStart);
+	select2.selectByIndex(0);
+	String first2 =select2.getFirstSelectedOption().getText();
+	String numberOnly2= first2.replaceAll("[^0-9]", "");
+	int a2 = Integer.parseInt(numberOnly2);
+	return a2;
+	}
+	public int secondTimeToInt(int a) {
+		Select select2 = new Select(new HuntPage().timeFinish);
+		select2.selectByIndex(a);
+		String first2 =select2.getFirstSelectedOption().getText();
+		String numberOnly2= first2.replaceAll("[^0-9]", "");
+		int a2 = Integer.parseInt(numberOnly2);
+		return a2;
+	}
 }
