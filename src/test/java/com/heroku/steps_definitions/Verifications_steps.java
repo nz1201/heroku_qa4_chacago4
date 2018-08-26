@@ -148,7 +148,6 @@ public class Verifications_steps {
 	else c=3;
 	int second = hunt.secondTimeToInt(c);
 	String actual = (second-first)+"";
-	System.out.println(actual);
 	Assert.assertEquals(expected, actual);
 		
 	}
