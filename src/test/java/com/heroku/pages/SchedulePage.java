@@ -18,4 +18,6 @@ public class SchedulePage extends TopNavigationBar {
 	@FindBy(xpath = "//button")
 	public WebElement cancelSchedule;
 	
+	
+	
 }
