@@ -10,14 +10,15 @@ import com.heroku.pages.SignInPage;
 import com.heroku.utilities.BrowserUtils;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Veiws_steps {
 	
 	// tests by Aizada
-	@When("the user should click {string} with {string} room")
-	public void the_user_should_click_with_room(String roomName, String roomNo) {
+	@Then("the user should see all daily view on all classes")
+	public void the_user_should_see_all_daily_view_on_all_classes() {
 		
 	    MapPage mapPage = new MapPage();
 	    mapPage.amazonRoom.click();
@@ -46,47 +47,36 @@ public class Veiws_steps {
 		
 	}
 	
-	
-	@When("the user should see daily view")
-	public void the_user_should_see_daily_view() {
-	  
-		
-	}
 
-	@When("the user should see weekly view")
-	public void the_user_should_see_weekly_view() {
+	@Given("the user should see weekly view on all classes")
+	public void the_user_should_see_weekly_view_on_all_classes() {
 		 MapPage mapPage = new MapPage();
 		 mapPage.goToMap();
 		 mapPage.googleRoom.click();
-		 mapPage.weeklyView.isDisplayed();
+		 Assert.assertTrue(mapPage.weeklyView.isDisplayed());
 		 
 		 mapPage.goToMap();
 		 mapPage.appleRoom.click();
-		 mapPage.weeklyView.isDisplayed();
+		 Assert.assertTrue(mapPage.weeklyView.isDisplayed());
 		 
 		 mapPage.goToMap();
 		 mapPage.microsoftRoom.click();
-		 mapPage.weeklyView.isDisplayed();
-		 
+		 Assert.assertTrue(mapPage.weeklyView.isDisplayed());		 
+		
 		 mapPage.goToMap();
 		 mapPage.amazonRoom.click();
-		 mapPage.weeklyView.isDisplayed();
+		 Assert.assertTrue(mapPage.weeklyView.isDisplayed());
 		 
 		 mapPage.goToMap();
 		 mapPage.teslaRoom.click();
-		 mapPage.weeklyView.isDisplayed();
+		 Assert.assertTrue(mapPage.weeklyView.isDisplayed());
 		 
 		 mapPage.goToMap();
 		 mapPage.facebookRoom.click();
-		 mapPage.weeklyView.isDisplayed();
+		 Assert.assertTrue(mapPage.weeklyView.isDisplayed());		 
 		 
 		 
 		 
-		 
-		
-	}
-	@When("the user should click {string} room")
-	public void the_user_should_click_room(String string) {
 		
 	}
 
