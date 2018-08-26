@@ -65,4 +65,11 @@ public class HuntPage extends TopNavigationBar {
 		int a2 = Integer.parseInt(numberOnly2);
 		return a2;
 	}
+	public String monthOfNextWeek() {
+		LocalDate currentDate = LocalDate.now();
+		currentDate = currentDate.plusDays(7);
+		System.out.println(currentDate.toString());
+		String month = currentDate.toString().split("-")[1];
+		return month;
+	}
 }

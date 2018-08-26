@@ -54,6 +54,8 @@ public class MapPage extends TopNavigationBar {
 	@FindBy(xpath="//a[@class='navbar-link']")
 	public WebElement myModule;
 	
+	@FindBy(tagName = "h1")
+	public WebElement campus;
 
 	
 }

@@ -13,8 +13,8 @@ import cucumber.api.junit.Cucumber;
 		},
 		tags = "@c",
 		features = {"src/test/resources/com/features"},
-		glue="com/heroku/steps_definitions",
-				dryRun =false
+		glue="com/heroku/steps_definitions"
+//				,dryRun =true
 		)
 
 
