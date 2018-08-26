@@ -122,12 +122,12 @@ public class Reservations_Steps {
 	}
 
 	// TeamLead reservation
-	@Then("cancel of Teamlead")
-	public void cancel_of_Teamlead() {
+	@Then("cancel of Teamlead {string} {string}")
+	public void cancel_of_Teamlead(String string, String string2) {
 		SignInPage signInPage = new SignInPage();
 		signInPage.signOut();
-		signInPage.email.sendKeys("teacherilsamnickel@gmail.com");
-		signInPage.password.sendKeys("samnickel");
+		signInPage.email.sendKeys(string);
+		signInPage.password.sendKeys(string2);
 		signInPage.signInButton.click();
 		SchedulePage schedule = new SchedulePage();
 		schedule.goToSchedule();

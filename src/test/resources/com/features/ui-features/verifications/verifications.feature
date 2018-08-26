@@ -11,7 +11,7 @@ Then the user should see just study rooms are clickable
 
 
 
-@reg
+@reg @adilet
 Scenario Outline: Name verification
 	Given the user "<email>" and "<password>"
 	And the user should click signin button

@@ -46,7 +46,7 @@ Examples:
 
 
 
-@reg	@ado
+@reg	@a
 Scenario Outline:: TeamLead's reservation 
 Given the user "<email>" and "<password>"
 And the user should click signin button
@@ -56,7 +56,7 @@ Then the user should select avaliable time
 And the user should select available room
 Then the user should go schedule page 
 Then the user check if it was reserved or not
-And cancel of Teamlead
+And cancel of Teamlead "<email>" "<password>"
 
 Examples: 
 	|email					  |password			|
