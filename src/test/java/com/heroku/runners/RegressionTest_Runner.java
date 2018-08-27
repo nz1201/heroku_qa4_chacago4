@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 		tags = "@reg",
 		features = {"src/test/resources/com/features"},
 		glue="com/heroku/steps_definitions",
-				dryRun =true
+				dryRun =false
 		)
 
 

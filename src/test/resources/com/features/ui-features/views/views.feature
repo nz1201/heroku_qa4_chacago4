@@ -1,7 +1,7 @@
 Feature: Views 
 
 
-@reg @a
+@reg 
 Scenario: Daily view 
 Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 And the user should click signin button
@@ -9,7 +9,7 @@ Then the user should see all daily view on all classes
 
 
 
-@reg @a
+@reg 
 Scenario: Weekly view
 Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 And the user should click signin button

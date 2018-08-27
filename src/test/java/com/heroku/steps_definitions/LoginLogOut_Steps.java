@@ -40,7 +40,7 @@ public class LoginLogOut_Steps {
 	@Then("IL text should be displayed")
 	public void il_text_should_be_displayed() {
 		MapPage map = new MapPage();
-		BrowserUtils.waitFor(5);
+		BrowserUtils.waitFor(6);
 		String actual = map.iLTitile.getText();
 		String expected = "IL";
 		Assert.assertEquals(expected, actual);

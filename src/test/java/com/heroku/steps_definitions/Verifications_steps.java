@@ -27,51 +27,54 @@ public class Verifications_steps {
 	
 	@Then("the user should see just study rooms are clickable")
 	public void the_user_should_see_just_study_rooms_are_clickable() {
-	   
+		
 		SignInPage signInPage = new SignInPage();
 		SchedulePage schePage=new SchedulePage();
+		BrowserUtils.waitFor(2);
 		MapPage mapPage=new MapPage();
-		signInPage.signInButton.click();
 		mapPage.googleRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		String actualRoomG=schePage.googleRoomTitle.getText();
 		String expectedRoomG="google";
 		Assert.assertEquals(expectedRoomG, actualRoomG);
 	
 		
-		
+		BrowserUtils.waitFor(2);
 		mapPage.goToMap();
 		mapPage.appleRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		String actualRoomA=schePage.googleRoomTitle.getText();
 		String expectedRoomA="apple";
 		Assert.assertEquals(expectedRoomA, actualRoomA);
 	
+		BrowserUtils.waitFor(2);
 		mapPage.goToMap();
 		mapPage.microsoftRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		String actualRoomM=schePage.googleRoomTitle.getText();
 		String expectedRoomM="microsoft";
 		Assert.assertEquals(expectedRoomM, actualRoomM);
 		
+		BrowserUtils.waitFor(2);
 		mapPage.goToMap();
 		mapPage.amazonRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		String actualRoomAM=schePage.googleRoomTitle.getText();
 		String expectedRoomAM="amazon";
 		Assert.assertEquals(expectedRoomAM, actualRoomAM);
 		
-		
+		BrowserUtils.waitFor(2);
 		mapPage.goToMap();
 		mapPage.teslaRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		String actualRoomT=schePage.googleRoomTitle.getText();
 		String expectedRoomT="tesla";
 		Assert.assertEquals(expectedRoomT, actualRoomT);
 		
+		BrowserUtils.waitFor(2);
 		mapPage.goToMap();
 		mapPage.facebookRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		String actualRoomF=schePage.googleRoomTitle.getText();
 		String expectedRoomF="facebook";
 		Assert.assertEquals(expectedRoomF, actualRoomF);

@@ -1,15 +1,12 @@
 package com.heroku.steps_definitions;
 
-<<<<<<< HEAD
-import cucumber.api.java.en.Given;
-import org.openqa.selenium.interactions.Action;
-import org.junit.Assert;
-=======
 
+import cucumber.api.java.en.Given;
+import org.openqa.selenium.interactions.Action;
+import org.junit.Assert;
 import org.junit.Assert;
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.interactions.Action;
->>>>>>> 6d9ed4aa802ee8546b6d36a9b758e632f7de208a
 import org.openqa.selenium.support.ui.Select;
 import com.heroku.pages.HuntPage;
 import com.heroku.pages.SchedulePage;
@@ -53,12 +50,98 @@ public class Reservations_Steps {
 		
 	}
 
+	@Then("the user should select available room teamLEad user {string} and {string}")
+	public void the_user_should_select_available_room_teamLEad_user_and(String string, String string2) {
+		 try { 
+			  HuntPage hunt = new HuntPage();
+			  hunt.bookGoogleRoom.click();
+			  hunt.confirmRoom.click();
+				
+			} catch (Exception e) {
+				SignInPage signInPage = new SignInPage();
+				signInPage.signOut();
+				signInPage.email.sendKeys(string);
+				signInPage.password.sendKeys(string2);
+				signInPage.signInButton.click();
+				SchedulePage schedule = new SchedulePage();
+				schedule.goToSchedule();
+				BrowserUtils.waitFor(2);
+				schedule.checkRoom.click();
+				BrowserUtils.waitFor(2);
+				schedule.cancelSchedule.click();
+				BrowserUtils.waitFor(2);
+				 HuntPage hunt = new HuntPage();
+				 signInPage.signOut();
+				 signInPage.email.sendKeys(string);
+					signInPage.password.sendKeys(string2);
+					signInPage.signInButton.click();
+				  hunt.goToHunt();
+				  hunt.dateClick.click();
+				  hunt.dateClick.sendKeys(new HuntPage().dayOfNextWeek());	
+				  Select select = new Select(hunt.timeStart);
+				  select.selectByValue("0: Object");
+				  Select select2 = new Select(hunt.timeFinish);
+				  select2.selectByValue("2: Object");
+				  hunt.searchRoom.click();
+				  hunt.bookGoogleRoom.click();
+				  hunt.confirmRoom.click();
+			}
+			
+		}
+	
+
 	@Then("the user should select available room")
 	public void the_user_should_select_available_room() {
+		 try { 
 		  HuntPage hunt = new HuntPage();
 		  hunt.bookGoogleRoom.click();
 		  hunt.confirmRoom.click();
+			
+		} catch (Exception e) {
+			SignInPage signInPage = new SignInPage();
+			signInPage.signOut();
+			signInPage.email.sendKeys("teacheriljanettebaskett@gmail.com");
+			signInPage.password.sendKeys("janettebaskett");
+			signInPage.signInButton.click();
+			SchedulePage schedule = new SchedulePage();
+			schedule.goToSchedule();
+			BrowserUtils.waitFor(3);
+			schedule.checkRoom.click();
+			BrowserUtils.waitFor(3);
+			schedule.cancelSchedule.click();
+			BrowserUtils.waitFor(3);
+			 HuntPage hunt = new HuntPage();
+			 signInPage.signOut();
+				signInPage.email.sendKeys("teacheriljanettebaskett@gmail.com");
+				signInPage.password.sendKeys("janettebaskett");
+				signInPage.signInButton.click();
+			  hunt.goToHunt();
+			  hunt.dateClick.click();
+			  hunt.dateClick.sendKeys(new HuntPage().dayOfNextWeek());	
+			  Select select = new Select(hunt.timeStart);
+			  select.selectByValue("0: Object");
+			  Select select2 = new Select(hunt.timeFinish);
+			  select2.selectByValue("2: Object");
+			  hunt.searchRoom.click();
+			  hunt.bookGoogleRoom.click();
+			  hunt.confirmRoom.click();
+		}
 		
+	}
+	@Then("the user should not select available room")
+	public void the_user_should_not_select_available_room() {
+		HuntPage hunt = new HuntPage();
+		 try {hunt.bookGoogleRoom.click();
+		 BrowserUtils.waitFor(2);
+		 Assert.assertTrue(false);
+		} catch (Exception e) {
+			Assert.assertTrue(true);
+		} 
+		  try {hunt.confirmRoom.click();
+		  Assert.assertTrue(false);
+			} catch (Exception e) {
+				Assert.assertTrue(true);
+			} 
 	}
 
 	@Then("the user should go schedule page")
@@ -73,6 +156,7 @@ public class Reservations_Steps {
 	public void the_user_check_if_it_was_reserved_or_not() {
 		 SchedulePage schedule = new SchedulePage();
 		 String expected = "conference ng-star-inserted";
+		 BrowserUtils.waitFor(2);
 		 String actual = schedule.checkRoom.getAttribute("class");
 		 System.out.println(expected + actual);
 		Assert.assertEquals(expected, actual);
@@ -88,6 +172,7 @@ public class Reservations_Steps {
 		signInPage.signInButton.click();
 		 SchedulePage schedule = new SchedulePage();
 		 schedule.goToSchedule();
+		 BrowserUtils.waitFor(2);
 		 String expected = "conference";
 		 String actual = schedule.checkRoom.getAttribute("class");
 		Assert.assertEquals(expected, actual);
@@ -98,14 +183,32 @@ public class Reservations_Steps {
 	public void the_student_from_different_group_check_if_it_was_reserved_or_not() {
 		SignInPage signInPage = new SignInPage();
 		signInPage.signOut();
+		signInPage.email.sendKeys("hcranfieldbx@blinklist.com");
+		signInPage.password.sendKeys("belviaizzatt");
+		signInPage.signInButton.click();
+		SchedulePage schedule = new SchedulePage();
+		schedule.goToSchedule();
+		BrowserUtils.waitFor(3);
+		try {
+			schedule.checkRoom.click();
+		BrowserUtils.waitFor(3);
+		schedule.cancelSchedule.click();
+		BrowserUtils.waitFor(3);
+		signInPage.signOut();
+			
+		} catch (Exception e) {
+			signInPage.signOut();
+		}
+		
+		BrowserUtils.waitFor(2);
 		signInPage.email.sendKeys("nguerrinbu@indiegogo.com");
 		signInPage.password.sendKeys("ellenunworth");
 		signInPage.signInButton.click();
-		 SchedulePage schedule = new SchedulePage();
 		 schedule.goToSchedule();
-		 String expected = "conference ng-star-inserted";
+		 String expected = "conference";
+		 BrowserUtils.waitFor(2);
 		 String actual = schedule.checkRoom.getAttribute("class");
-//		 Assert.assertEquals(expected, actual);
+		 Assert.assertEquals(expected, actual);
 		
 		
 	}
@@ -120,9 +223,9 @@ public class Reservations_Steps {
 		SchedulePage schedule = new SchedulePage();
 		schedule.goToSchedule();
 		schedule.checkRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		schedule.cancelSchedule.click();
-	   
+		BrowserUtils.waitFor(2);
 	}
 	@Then("cancelation of room reservation")
 	public void cancelation_of_room_reservation() {
@@ -134,8 +237,9 @@ public class Reservations_Steps {
 		SchedulePage schedule = new SchedulePage();
 		schedule.goToSchedule();
 		schedule.checkRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		schedule.cancelSchedule.click();
+		BrowserUtils.waitFor(2);
 	}
 
 	
@@ -154,8 +258,9 @@ public class Reservations_Steps {
 		SchedulePage schedule = new SchedulePage();
 		schedule.goToSchedule();
 		schedule.checkRoom.click();
-		BrowserUtils.waitFor(3);
+		BrowserUtils.waitFor(2);
 		schedule.cancelSchedule.click();
+		BrowserUtils.waitFor(2);
 		signInPage.signOut();
 	}
 
