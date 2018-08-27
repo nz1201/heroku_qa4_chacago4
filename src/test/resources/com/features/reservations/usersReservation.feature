@@ -42,9 +42,9 @@ Then the user check if it was reserved or not
 
 Examples:
     |<email> 						  |<password> 	|
-    |teacheriljanettebaskett@gmail.com|				|
-	|teacherillemmyearland@gmail.com  |				|
-	|teacherilsamnickel@gmail.com	  |				|
+    |teacheriljanettebaskett@gmail.com|	janettebaskett			|
+	|teacherillemmyearland@gmail.com  |		lemmyearland		|
+	|teacherilsamnickel@gmail.com	  |	samnickel			|
 
 
 
@@ -85,37 +85,37 @@ Then the user check if it was reserved or not
 
 Examples:
     |<email> 						  |<password> 	|
-    |dfrederickb5@yellowbook.com	|	|
-	|apainb6@google.co.jp			|	|
-	|fbawmeb7@studiopress.com |	|
-	|dhughillb8@gov.uk  |	|
-	|nasgodbyb9@amazon.co.jp|	|
-	|apretleybb@t.co 		|	|
-	|alanneybc@booking.com |	|
-	|mflethambd@163.com  	|	|
-	|bolennikovbe@taobao.com |	|
-	|dayreebg@1und1.de   |	|
-	|sweeklybh@spotify.com 	|	|
-	|dswatheridgebi@list-manage.com 	|	|
-	|awagenenbk@cnet.com 			|	|
-	|rlittellbl@cloudflare.com			|	|
-	|sfearnsidesbn@cpanel.net			|	|
-	|ryurocjkinbo@utexas.edu			|	|
-	|kcotterelbq@homestead.com			|	|
-	|ejurczakbr@mac.com					|	|
-	|bgrebertbs@shareasale.com			|	|
-	|dbrandesbt@goo.gl					|	|
-	|nguerrinbu@indiegogo.com			|	|
-	|ucarlislebv@gizmodo.com			|	|
-	|cdooheybw@biglobe.ne.jp			|	|
-	|bduranteby@wikia.com	|	|
-	|rdunbobbinbz@nifty.com|	|
-	|mdarlastonc0@skyrock.com|	|
-	|vferrieric2@state.tx.us|	|
-	|jtiesmanc3@booking.com|	|
-	|cmcfadzeanc4@posterous.com|	|
-	|vwincklec5@latimes.com|	|
-	|gsnowdenc6@istockphoto.com|	|
+    |dfrederickb5@yellowbook.com	|engraciahuc	|
+	|apainb6@google.co.jp			|rosettalightollers	|
+	|fbawmeb7@studiopress.com |	sherilyngohn|
+	|dhughillb8@gov.uk  |celiefaltin	|
+	|nasgodbyb9@amazon.co.jp|jockodellenbach	|
+	|apretleybb@t.co 		|cindradomsalla	|
+	|alanneybc@booking.com |	randenemacgown|
+	|mflethambd@163.com  	|	herschtrunks|
+	|bolennikovbe@taobao.com |adinamcclean	|
+	|dayreebg@1und1.de   |	clemmieklazenda|
+	|sweeklybh@spotify.com 	|bartletcarlin	|
+	|dswatheridgebi@list-manage.com 	|auriamullis	|
+	|awagenenbk@cnet.com 			|nikesmall	|
+	|rlittellbl@cloudflare.com			|otislangtree	|
+	|sfearnsidesbn@cpanel.net			|victoirlapish	|
+	|ryurocjkinbo@utexas.edu			|erichapinnere	|
+	|kcotterelbq@homestead.com			|hannierrington	|
+	|ejurczakbr@mac.com					|	mariallyas|
+	|bgrebertbs@shareasale.com			|alansonlacey	|
+	|dbrandesbt@goo.gl					|	florellalally|
+	|nguerrinbu@indiegogo.com			|ellenunworth	|
+	|ucarlislebv@gizmodo.com			|	herbyedwicke|
+	|cdooheybw@biglobe.ne.jp			|	emilymoorcroft|
+	|bduranteby@wikia.com	|adanmalser	|
+	|rdunbobbinbz@nifty.com|	jeanelleshilleto|
+	|mdarlastonc0@skyrock.com|wildencreavan	|
+	|vferrieric2@state.tx.us|quentinambler	|
+	|jtiesmanc3@booking.com|	jonisbirdwhistle|
+	|cmcfadzeanc4@posterous.com|brennaxelbee	|
+	|vwincklec5@latimes.com|	standfordboase|
+	|gsnowdenc6@istockphoto.com|orellerehm	|
    
 	
 	
