@@ -1,4 +1,5 @@
 Feature: Login and logout 
+
 @reg @hus
  Scenario Outline: Login functionality 
 	Given the user "<email>" and "<password>"

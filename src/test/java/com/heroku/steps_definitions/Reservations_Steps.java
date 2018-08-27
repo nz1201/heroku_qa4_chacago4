@@ -1,8 +1,15 @@
 package com.heroku.steps_definitions;
 
+<<<<<<< HEAD
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.interactions.Action;
 import org.junit.Assert;
+=======
+
+import org.junit.Assert;
+import cucumber.api.java.en.Given;
+import org.openqa.selenium.interactions.Action;
+>>>>>>> 6d9ed4aa802ee8546b6d36a9b758e632f7de208a
 import org.openqa.selenium.support.ui.Select;
 import com.heroku.pages.HuntPage;
 import com.heroku.pages.SchedulePage;
