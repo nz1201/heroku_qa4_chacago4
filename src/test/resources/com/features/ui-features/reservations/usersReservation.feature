@@ -15,9 +15,9 @@ Then the student from different group check if it was reserved or not
 And  cancel reservation of end to end
 
 
-@reg @aigerim
+@reg
 Scenario: Room reservation  
-Given the user "htwinbrowb4@blogspot.com" and "kanyabang"
+Given the user "abowfinc1@ning.com" and "emeryvassar"
 And the user should click signin button
 Then the user should click hunt button
 And the user should select available date
@@ -25,6 +25,7 @@ Then the user should select avaliable time
 And the user should select available room
 Then the user should go schedule page 
 Then the user check if it was reserved or not
+And cancelation of room reservation
 
 
 @reg	
