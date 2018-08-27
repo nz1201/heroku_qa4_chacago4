@@ -25,7 +25,7 @@ public class MyInfoStepDefs {
 
 	@Given("user logs in using {string} {string}")
 	public void user_logs_in_using(String username, String password) {
-		Driver.getDriver().get(ConfigurationReader.getProperty("qa1_url"));
+		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 		SignInPage signInPage = new SignInPage();
 		signInPage.email.sendKeys(username);
 		signInPage.password.sendKeys(password);
@@ -42,6 +42,7 @@ public class MyInfoStepDefs {
 	public void user_info_should_match_the_db_records_using(String email) {
 		String sql = "select firstname, lastname, role from users where email = '" + email + "';";
 		System.out.println(sql);
+		DBUtils.createConnection();
 		List<Map<String, Object>> result = DBUtils.getQueryResultMap(sql);
 		// per requirements, we cannot have duplicated emails
 		assertEquals("Returned multiple users with email: " + email, 1, result.size());
@@ -83,7 +84,7 @@ public class MyInfoStepDefs {
 		for (WebElement el : teamPage.teamMemberNames) {
 			actualNames.add(el.getText());
 		}
-
+		DBUtils.createConnection();
 		String query = "SELECT u1.firstname, u1.lastname, u1.role FROM users u1 INNER JOIN users u2 ON (u1.team_id = u2.team_id) where u2.email='"
 				+ email + "'";
 

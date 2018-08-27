@@ -1,10 +1,10 @@
 Feature: Information about me 
 
-@db 
+@db
 Scenario: my self 
-	Given user logs in using "efewtrell8c@craigslist.org" "jamesmay" 
+	Given user logs in using "htwinbrowb4@blogspot.com" "kanyabang" 
 	When the user is on the my self page 
-	Then user info should match the db records using "efewtrell8c@craigslist.org" 
+	Then user info should match the db records using "htwinbrowb4@blogspot.com" 
 	
 	
 @db 

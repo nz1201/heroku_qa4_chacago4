@@ -7,14 +7,16 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = { "html:target/cucumber-heroku-report",
+		plugin = { 
+				"pretty",
+				"html:target/cucumber-heroku-report",
 				"json:target/cucumber-heroku.json",
 				"rerun:target/rerun.txt"
 		},
 
-		tags = "@hop",
+		tags = "@db5",
 		features = {"src/test/resources/com/features/back-end-features","src/test/resources/com/features/ui-features"},
-		glue= {"com/heroku/steps_definitions", "com/herokuBackend/steps_definitions"}
+		glue= {"com/heroku/steps_definitions", "com/herokuBackend/step_definitions"}
 //		,dryRun =true
 		)
 

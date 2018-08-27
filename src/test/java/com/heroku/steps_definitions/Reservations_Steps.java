@@ -49,6 +49,15 @@ public class Reservations_Steps {
 		  hunt.searchRoom.click();
 		
 	}
+	@Then("the user should select avaliable time for db")
+	public void the_user_should_select_avaliable_time_for_db() {
+		 HuntPage hunt = new HuntPage();
+		  Select select = new Select(hunt.timeStart);
+		  select.selectByValue("0: Object");
+		  Select select2 = new Select(hunt.timeFinish);
+		  select2.selectByValue("2: Object");
+		  hunt.searchRoom.click();
+	}
 
 	@Then("the user should select available room teamLEad user {string} and {string}")
 	public void the_user_should_select_available_room_teamLEad_user_and(String string, String string2) {

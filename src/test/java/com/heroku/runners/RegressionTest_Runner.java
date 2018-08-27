@@ -7,7 +7,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = { "html:target/cucumber-heroku-report",
+		plugin = { 
+				"pretty",
+				"html:target/cucumber-heroku-report",
 				"json:target/cucumber-heroku.json",
 				"rerun:target/rerun.txt"
 		},
