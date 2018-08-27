@@ -35,6 +35,9 @@ public class SchedulePage extends TopNavigationBar {
 	
 	@FindBy(xpath="//div[@class='container']//h1[@class='title']")
 	public WebElement facebookRoomTitle;
+	
+	@FindBy(xpath="//snack-bar-container ")
+	public WebElement cancelMessage;
 
 	
 	
