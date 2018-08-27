@@ -102,7 +102,7 @@ Examples:
 	|teacherillemmyearland@gmail.com  	|lemmyearland			|
 	|teacherilsamnickel@gmail.com	  	|samnickel				|
 	
-@reg	
+@reg @b
 Scenario: Title  
 Given the user "htwinbrowb4@blogspot.com" and "kanyabang"
 And the user should click signin button

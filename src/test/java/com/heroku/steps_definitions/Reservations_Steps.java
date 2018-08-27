@@ -2,6 +2,8 @@ package com.heroku.steps_definitions;
 
 
 import org.junit.Assert;
+import cucumber.api.java.en.Given;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.Select;
 
 import com.heroku.pages.HuntPage;
@@ -30,7 +32,7 @@ public class Reservations_Steps {
 	public void the_user_should_select_available_date() {
 		  HuntPage hunt = new HuntPage();
 		  hunt.dateClick.click();
-		  hunt.dateClick.sendKeys(hunt.dayOfNextWeek());
+		  hunt.dateClick.sendKeys(new HuntPage().dayOfNextWeek());
 		  
 
 	
@@ -136,5 +138,29 @@ public class Reservations_Steps {
 	
 	
 	
+
+	// TeamLead reservation
+	@Then("cancel of Teamlead {string} {string}")
+	public void cancel_of_Teamlead(String string, String string2) {
+		SignInPage signInPage = new SignInPage();
+		signInPage.signOut();
+		signInPage.email.sendKeys(string);
+		signInPage.password.sendKeys(string2);
+		signInPage.signInButton.click();
+		SchedulePage schedule = new SchedulePage();
+		schedule.goToSchedule();
+		schedule.checkRoom.click();
+		BrowserUtils.waitFor(3);
+		schedule.cancelSchedule.click();
+		signInPage.signOut();
+	}
+
+
+
+
+
+
+
+
 
 }

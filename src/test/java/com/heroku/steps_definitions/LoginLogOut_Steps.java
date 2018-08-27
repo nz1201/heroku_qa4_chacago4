@@ -1,6 +1,8 @@
 package com.heroku.steps_definitions;
 
 
+import org.junit.Assert;
+
 import com.heroku.pages.MapPage;
 import com.heroku.pages.SignInPage;
 import com.heroku.utilities.BrowserUtils;
@@ -11,7 +13,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import junit.framework.Assert;
+
 
 public class LoginLogOut_Steps {
 	
@@ -64,8 +66,12 @@ public class LoginLogOut_Steps {
 	}
 	
 	@Then("actualTitle should match expectedTitle: {string}")
-	public void actualtitle_should_match_expectedTitle(String string) {
+	public void actualtitle_should_match_expectedTitle(String expectedTitle) {
 	   
+		
+		String actualTitle=Driver.getDriver().getTitle();
+		Assert.assertEquals(expectedTitle, actualTitle);
+		
 		
 	}
 	

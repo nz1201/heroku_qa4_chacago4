@@ -1,41 +1,24 @@
 Feature: Views 
 
 
-@reg	
-Scenario Outline: Daily view 
+@reg @a
+Scenario: Daily view 
 Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 And the user should click signin button
-When the user should click "<eachRoom>" room
-And the user should see daily view
+Then the user should see all daily view on all classes
 
-Examples:
-|eachRoom |
-|apple |
-|facebook|
-|amazon|
-|tesla|
-|microsoft |
 
-@reg	
-Scenario Outline: Weekly view
+
+@reg @a
+Scenario: Weekly view
 Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 And the user should click signin button
-And the user should click signin button
-When the user should click "<eachRoom>" room
-And the user should see weekly view
-
-Examples:
-|eachRoom |
-|apple |
-|facebook|
-|amazon|
-|tesla|
-|microsoft |
+And the user should see weekly view on all classes
 
 
 
 
-@reg	
+@reg 
 Scenario: Calendar view of date
 Given the user "teacheriljanettebaskett@gmail.com" and "janettebaskett"
 And the user should click signin button
