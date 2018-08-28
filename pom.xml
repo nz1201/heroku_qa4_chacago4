@@ -68,7 +68,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
-					<include>RegressionTest_Runner.java</include>
+					<include>CukesRunner.java</include>
 					<!--	<include>**/*CukesRunner.java</include> -->
 					</includes>
 				</configuration>
