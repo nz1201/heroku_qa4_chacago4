@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 		plugin = { 
 				"pretty",
 				"html:target/cucumber-heroku-report",
-				"json:target/cucumber-heroku.json",
+				"json:target/cucumber.json",
 				"rerun:target/rerun.txt"
 		},
 
