@@ -90,7 +90,7 @@
 							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>
 							<!-- path to the json file that will be used to genetrate report -->
 							<!-- it has to match the one on the cukesrunner -->
-							<cucumberoutput>${project.build.directory}/target/cucumber-heroku.json</cucumberoutput>
+							<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
 							<enableflashcharts></enableflashcharts>
 						</configuration>
 					</execution>
