@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+import com.heroku.pages.SchedulePage;
 import com.heroku.pages.SelfPage;
 import com.heroku.pages.SignInPage;
 import com.heroku.pages.TeamPage;
@@ -25,7 +27,32 @@ public class ReservationStepDefs {
 	
 	@Then("the user should verify db with last reservation by UI")
 	public void the_user_should_verify_db_with_last_reservation_by_UI() {
-	   
+		String email = "osurmeyersbf@illinois.edu";
+		String sql = "Select * from conference where reservator_id = (Select id from users where email = 'osurmeyersbf@illinois.edu');";
+		System.out.println(sql);
+		DBUtils.createConnection();
+		List<Object> date = DBUtils.getColumnData(sql, "date");
+		List<Object> id = DBUtils.getColumnData(sql, "reservator_id");
+		String date2 = date.get(0).toString();
+		String id2 = id.get(0).toString();
+		Assert.assertEquals(date2, "2018-09-03");
+		Assert.assertEquals(id2, "134");
+		
+	}
+	
+	@Then("the user should cancel reservation of db")
+	public void the_user_should_cancel_reservation_of_db() {
+		SignInPage signInPage = new SignInPage();
+		signInPage.signOut();
+		signInPage.email.sendKeys("osurmeyersbf@illinois.edu");
+		signInPage.password.sendKeys("jacquenettakelling");
+		signInPage.signInButton.click();
+		SchedulePage schedule = new SchedulePage();
+		schedule.goToSchedule();
+		schedule.checkRoom2.click();
+		BrowserUtils.waitFor(2);
+		schedule.cancelSchedule.click();
+		BrowserUtils.waitFor(2);
 	}
 
 //	@Given("user logs in using {string} {string}")

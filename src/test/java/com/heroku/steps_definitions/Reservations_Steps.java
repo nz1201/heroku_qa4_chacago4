@@ -3,6 +3,9 @@ package com.heroku.steps_definitions;
 
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.interactions.Action;
+
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Assert;
 import cucumber.api.java.en.Given;
@@ -34,7 +37,7 @@ public class Reservations_Steps {
 		  HuntPage hunt = new HuntPage();
 		  hunt.dateClick.click();
 		  hunt.dateClick.sendKeys(new HuntPage().dayOfNextWeek());
-		  
+		
 
 	
 	}
@@ -47,16 +50,23 @@ public class Reservations_Steps {
 		  Select select2 = new Select(hunt.timeFinish);
 		  select2.selectByValue("2: Object");
 		  hunt.searchRoom.click();
+		  
 		
 	}
 	@Then("the user should select avaliable time for db")
 	public void the_user_should_select_avaliable_time_for_db() {
 		 HuntPage hunt = new HuntPage();
 		  Select select = new Select(hunt.timeStart);
-		  select.selectByValue("0: Object");
+		  select.selectByValue("2: Object");
 		  Select select2 = new Select(hunt.timeFinish);
-		  select2.selectByValue("2: Object");
+		  select2.selectByValue("4: Object");
 		  hunt.searchRoom.click();
+		 try { hunt.bookGoogleRoom.click();
+		  hunt.confirmRoom.click();
+			
+		} catch (Exception e) {
+			
+		}
 	}
 
 	@Then("the user should select available room teamLEad user {string} and {string}")
@@ -65,6 +75,7 @@ public class Reservations_Steps {
 			  HuntPage hunt = new HuntPage();
 			  hunt.bookGoogleRoom.click();
 			  hunt.confirmRoom.click();
+			  
 				
 			} catch (Exception e) {
 				SignInPage signInPage = new SignInPage();

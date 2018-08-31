@@ -15,6 +15,9 @@ public class SchedulePage extends TopNavigationBar {
 	@FindBy(xpath = "(//tbody//tr)[1]//td[7]")
 	public WebElement checkRoom;
 	
+	@FindBy(xpath = "(//tbody//tr)[3]//td[7]")
+	public WebElement checkRoom2;
+	
 	@FindBy(xpath = "//button")
 	public WebElement cancelSchedule;
 	

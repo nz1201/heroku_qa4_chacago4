@@ -10,6 +10,12 @@
 	</properties>
 
 	<dependencies>
+	<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-sandwich</artifactId>
+			<version>3.15.0</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -55,7 +61,17 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.4</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.0</version>
+		</dependency>
 
 	</dependencies>
 
@@ -68,8 +84,8 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
-					<include>RegressionTest_Runner.java</include>
-					<!--	<include>**/*CukesRunner.java</include> -->
+					<!--  <include>RegressionTest_Runner.java</include> -->
+					<include>**/*CukesRunner.java</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -99,6 +115,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 </project>
-  
-  

@@ -1,6 +1,6 @@
 Feature: Login and logout 
 
-@reg @smoke
+@reg @smoke @db5
  Scenario Outline: Login functionality 
 	Given the user "<email>" and "<password>"
 	And the user should click signin button
